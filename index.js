@@ -26,13 +26,11 @@ const view = state =>
   h('body', [
     h('h1', 'Multiple counters!')
   , multiCounters(state)
-  , h('button', {on: {click: [state.appendCounter$]}}, 'Add counter')
+  , h('button', {on: {click: state.appendCounter$}}, 'Add counter')
   ])
 
 const multiCounters = state =>
-  h('div', 
-    R.addIndex(R.map)(counter(state), state.counts$())
-  )
+  h('div', R.addIndex(R.map)(counter(state), state.counts$()))
 
 const counter = state => (count, idx) =>
   h('p', [
