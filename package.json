@@ -1,0 +1,21 @@
+{
+  "name": "multi-counters",
+  "version": "0.0.1",
+  "description": "multiple counters example",
+  "main": "index.js",
+  "scripts": {
+    "dev": "budo index.js",
+    "build": "browserify -t es2040 index.js > dist/index.js"
+  },
+  "author": "jay r bolton <jayrbolton@gmail.com> (http://jayrbolton.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "flimflam": "0.0.2",
+    "ramda": "0.23.0"
+  },
+  "devDependencies": {
+    "browserify": "14.0.0",
+    "budo": "9.4.5",
+    "es2040": "1.2.4"
+  }
+}
